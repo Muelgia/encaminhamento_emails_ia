@@ -1,0 +1,76 @@
+{
+  "TESTES": {
+    "palavras_chaves_grupo": [
+      "integracao",
+      "integração",
+      "teste"
+    ],
+    "regras": {
+      "EMAIL_TESTE_INTEGRACAO": {
+        "descricao": "Verifica se é um email de teste da integração.",
+        "email_destino": "qa.automacao@exemplo.com"
+      }
+    }
+  },
+  "FINANCEIRO": {
+    "palavras_chaves_grupo": [
+      "financeiro",
+      "boleto",
+      "valor",
+      "errado",
+      "pagar",
+      "fatura",
+      "cobrança"
+    ],
+    "regras": {
+      "FIN_VALOR_INCORRETO": {
+        "descricao": "Relatos de divergência de valores, valor cobrado errado ou disputa de fatura.",
+        "email_destino": "auditoria.fiscal@exemplo.com"
+      },
+      "FIN_BOLETO_NAO_RECEBIDO": {
+        "descricao": "Cliente ou parceiro informando que não recebeu o boleto bancário ou a fatura.",
+        "email_destino": "recebiveis@exemplo.com"
+      },
+      "FIN_CONTAS_A_PAGAR": {
+        "descricao": "Assuntos relacionados a contas que a empresa deve pagar (fornecedores, serviços, etc).",
+        "email_destino": "contas.pagar@exemplo.com"
+      }
+    }
+  },
+  "ADMINISTRATIVO": {
+    "palavras_chaves_grupo": [
+      "adm",
+      "administracao",
+      "solicitacao",
+      "solicitação",
+      "pedido"
+    ],
+    "regras": {
+      "ADM_SOLICITACAO_GERAL": {
+        "descricao": "Solicitações administrativas diversas (cadastro, acessos, documentos).",
+        "email_destino": "backoffice.adm@exemplo.com"
+      }
+    }
+  },
+  "SUPORTE": {
+    "palavras_chaves_grupo": [
+      "suporte",
+      "erro",
+      "falha",
+      "bug",
+      "duvida",
+      "dúvida",
+      "ajuda"
+    ],
+    "regras": {
+      "SUPORTE_ERRO_TECNICO": {
+        "descricao": "Relato de erros técnicos, bugs, falhas ou sistema fora do ar.",
+        "email_destino": "n2.tech@exemplo.com"
+      },
+      "SUPORTE_DUVIDA_USO": {
+        "descricao": "Dúvidas conceituais ou perguntas sobre como utilizar uma funcionalidade.",
+        "email_destino": "atendimento.cliente@exemplo.com"
+      }
+    }
+  }
+}
