@@ -1,0 +1,24 @@
+services:
+  triagem-emails:
+    build: .
+    image: encaminhamento-emails-ia
+    container_name: triagem-emails
+    # Verifica a caixa de entrada a cada POLL_INTERVAL_SECONDS (config/.env)
+    command: ["python", "main.py", "--loop"]
+    # Volta sozinho após falhas e após reiniciar o Docker/servidor
+    restart: unless-stopped
+    env_file:
+      - config/.env
+    volumes:
+      # Regras e .env: edite no host e rode `docker compose restart`
+      - ./config:/app/config:ro
+      # Histórico de auditoria e logs persistem fora do container
+      - ./data:/app/data
+      - ./logs:/app/logs
+    # Tempo para concluir o e-mail em andamento antes de parar
+    stop_grace_period: 3m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

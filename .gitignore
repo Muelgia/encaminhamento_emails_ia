@@ -202,3 +202,9 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv,dotenv,data
+# Dados locais de execução
+data/
+logs/
+
+# Regras reais (contêm e-mails internos): versionar apenas o regras.example.json
+config/regras.json

@@ -19,6 +19,7 @@ ENV_FILE = CONFIG_DIR / ".env"
 RULES_FILE = CONFIG_DIR / "regras.json"
 LOG_FILE = LOGS_DIR / "app.log"
 CSV_FILE = DATA_DIR / "historico_emails.csv"
+DB_FILE = DATA_DIR / "emails.db"
 
 # =========================
 # Inicialização de Ambiente
@@ -33,7 +34,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 # =========================
 
 if __name__ == "__main__":
-    print(f"--- Diagnóstico de Caminhos ---")
+    print("--- Diagnóstico de Caminhos ---")
     print(f"Raiz do Projeto: {PROJECT_ROOT}")
     print(f"Configuração [.env]: {'OK' if ENV_FILE.exists() else 'AUSENTE'}")
     print(f"Regras [JSON]: {'OK' if RULES_FILE.exists() else 'AUSENTE'}")

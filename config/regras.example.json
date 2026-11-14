@@ -8,7 +8,10 @@
     "regras": {
       "EMAIL_TESTE_INTEGRACAO": {
         "descricao": "Verifica se é um email de teste da integração.",
-        "email_destino": "qa.automacao@exemplo.com"
+        "email_destino": [
+          "qa.automacao@exemplo.com",
+          "qa.backup@exemplo.com"
+        ]
       }
     }
   },
